@@ -4,10 +4,7 @@ import json
 
 #parses through user profile url and extracts all the user activity related info
 
-
-#url = "https://brainly.com/profile/ishratahmedmren-4755517/submitted"
-
-page = requests.get("https://brainly.com/profile/ishratahmedmren-4755517/solved")
+page = requests.get("https://brainly.com/profile/ishratahmedmren-4755517/submitted")
 print(page.status_code) #prints status_code property
 
 #parse this document using BeautifulSoup
@@ -38,11 +35,11 @@ for tasks in task_list:
 
     #get the name who posted the question
     name = task_header.find('a', class_="title").text
-    question['questionPostedBy'] = name
+    question['questionAnsweredBy'] = name
 
     #get the rank
     rank = task_header.find('span', class_="level").select('a')[0].text
-    question['questionerRank'] = rank
+    question['answererRank'] = rank
 
     #get the category
     category = task_header.find('span', class_="category").select('a')[0].text
