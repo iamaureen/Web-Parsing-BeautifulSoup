@@ -62,7 +62,7 @@ for tasks in task_list:
 #print(question_list)
 #print(json.dumps(question_list))
 #https://stackoverflow.com/questions/37661863/convert-a-list-to-json-objects
-print(json.dumps({'questionAnswered': question_list}))
+print(json.dumps({'questionAsked': question_list}))
 
 
 
