@@ -102,3 +102,5 @@ test_df = pd.DataFrame({'movie': names,
                        'votes': votes})
 print(test_df.info())
 
+test_df.to_csv("movieimdb.csv", sep=',', encoding='utf-8')
+
